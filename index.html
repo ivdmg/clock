@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-digital">
+            <div class="week"></div>
+            <div class="date">
+                <span id="hrs"></span>
+                <span>:</span>
+                <span id="min"></span>
+                <span>:</span>
+                <span id="sec"></span>
+            </div>
+        </div>
+        <div class="clock-analog">
+            <div class="hands">
+                <div id="hand-hrs"></div>
+                <div id="hand-min"></div>
+                <div id="hand-sec"></div>
+                <div></div>
+            </div>
+            <div class="analog-items">
+                <span style="--index: 1"><i></i></span>
+                <span style="--index: 2"><i></i></span>
+                <span style="--index: 3"><i>3</i></span>
+                <span style="--index: 4"><i></i></span>
+                <span style="--index: 5"><i></i></span>
+                <span style="--index: 6"><i>6</i></span>
+                <span style="--index: 7"><i></i></span>
+                <span style="--index: 8"><i></i></span>
+                <span style="--index: 9"><i>9</i></span>
+                <span style="--index: 10"><i></i></span>
+                <span style="--index: 11"><i></i></span>
+                <span style="--index: 12"><i>12</i></span>
+            </div>
+        </div>
+        <button id="btn">Analog</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

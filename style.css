@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #e2e2ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 800px;
+}
+
+.clock-digital {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 300px;
+    box-shadow: -2.17893px -2.17893px 6.5368px #FFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+    border-radius: 40px;
+    font-size: 120px;
+    color: #4d596e;
+}
+.week{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #d9d9e3;
+    font-size: 25px;
+    color: #4d596e;
+    border-radius: 10px;
+    box-shadow: inset -6px -6px 10px rgba(255, 255, 255, 0.25), inset 2px 2px 10px rgba(0, 0, 0, 0.20);
+    z-index: 2;
+    overflow: hidden;
+
+}
+.week::before{
+    content: '' ;
+    position: absolute;
+    top: -1px;
+    left: 0;
+
+    width: 100px;
+    height: 6px;
+    background-color: rgb(207, 36, 36);
+    z-index: 1;
+}
+.clock-digital span {
+    display: inline-block;
+    text-align: center;
+    width: 140px;
+}
+
+.clock-digital span:nth-child(even) {
+    width: 40px;
+    transform: translateY(-12px);
+    margin: 0 17px;
+}
+
+.clock-analog {
+    margin: 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: #e2e2ee;
+    box-shadow: inset -6px -6px 16px rgba(255, 255, 255, 0.25), inset 2px 2px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    position: relative;
+}
+
+.hands {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 0;
+}
+.hands div:last-child{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e2e2ee;
+    border: 3px solid #4d596e;
+    border-radius: 50%;
+}
+#hand-hrs {
+    position: absolute;
+    top: 50%;
+    width: 4px;
+    height: 80px;
+    background-color: #4d596e;;
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+#hand-min {
+    position: absolute;
+    top: 50%;
+    width: 4px;
+    height: 120px;
+    background-color: #4d596e;
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+#hand-sec {
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 150px;
+    background-color: rgb(207, 36, 36);
+    transform-origin: 50% 85%;
+    border-radius: 5px;
+}
+.clock-analog span {
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(30deg * var(--index))) translateY(-150px);
+    color: #4d596e;
+}
+
+.clock-analog .analog-items > :nth-child(3),
+.clock-analog .analog-items > :nth-child(6),
+.clock-analog .analog-items > :nth-child(9),
+.clock-analog .analog-items > :nth-child(12) {
+    background-color: transparent;
+    width: 20px;
+}
+
+.clock-analog span i {
+    display: block;
+    transform: rotate(calc(-30deg * var(--index)));
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+}
+
+button {
+    margin: 120px 15px 15px 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 130px;
+    height: 50px;
+    box-shadow: -2.17893px -2.17893px 6.5368px #FFF, 2.17893px 2.17893px 6.5368px rgba(174, 174, 192, 0.4);
+    background-color: #e2e2ee;
+    border-radius: 15px;
+    border: none;
+    color: #4d596e;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+}
+button:hover{
+    background-color: #d9d9e3;
+    transition: .2s ease;
+}
