@@ -12,6 +12,16 @@
 </head>
 <body>
     <div class="container">
+        <div class="dropdown">
+            <div class="dropdown-container">
+                <button id="btndropdown" class="btndropdown"> Digital clock</button>
+                <div class="dropdown-list">
+                    <button id="digital">Digital clock</button>
+                    <button id="analog">Analog clock</button>
+                    <button id="calendar">Calendar</button>
+                </div>
+            </div>
+        </div>
         <div class="clock-digital">
             <div class="week"></div>
             <div class="date">
@@ -44,7 +54,25 @@
                 <span style="--index: 12"><i>12</i></span>
             </div>
         </div>
-        <button id="btn">Analog</button>
+        <div class="calendar" >
+            <div class="calendar-header">
+                <button id="prev-btn"><img src="./image/calendar/left.svg" alt=""></button>
+                <span id="month-year"></span>
+                <button id="next-btn"><img src="./image/calendar/right.svg" alt=""></button>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-weekdays">
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                    <div>Sun</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
